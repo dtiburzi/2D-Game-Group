@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cla22ju3wrqcc" path="res://scenes/slime.tscn" id="7_rvl1b"]
 [ext_resource type="FontFile" uid="uid://cghgc7rm1slap" path="res://asset/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="8_28hfy"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i4g2d"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5g36"]
 texture = ExtResource("2_se5td")
 0:0/0 = 0
 1:0/0 = 0
@@ -172,7 +172,7 @@ texture = ExtResource("2_se5td")
 19:10/0 = 0
 20:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_emq13"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8x5g"]
 texture = ExtResource("3_8524o")
 0:0/0 = 0
 1:0/0 = 0
@@ -298,25 +298,26 @@ texture = ExtResource("3_8524o")
 
 [sub_resource type="TileSet" id="TileSet_12jho"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_i4g2d")
-sources/1 = SubResource("TileSetAtlasSource_emq13")
+sources/0 = SubResource("TileSetAtlasSource_j5g36")
+sources/1 = SubResource("TileSetAtlasSource_e8x5g")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sl6j5"]
 distance = -35.0
 
 [sub_resource type="Animation" id="Animation_6txgd"]
-length = 0.001
+length = 1.5
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("../platform2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(290, -76)]
+"values": [Vector2(579, -139), Vector2(688, -139)]
 }
 
 [sub_resource type="Animation" id="Animation_4ro46"]
@@ -343,18 +344,19 @@ _data = {
 }
 
 [sub_resource type="Animation" id="Animation_1cgao"]
-length = 0.001
+length = 1.5
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("../platform1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(579, -139)]
+"values": [Vector2(198, -76), Vector2(278, -76)]
 }
 
 [sub_resource type="Animation" id="Animation_cqw1f"]
@@ -432,7 +434,7 @@ position = Vector2(329, 79)
 [node name="platforms" type="Node" parent="."]
 
 [node name="platform1" parent="platforms" instance=ExtResource("4_rxhym")]
-position = Vector2(290, -76)
+position = Vector2(198, -76)
 
 [node name="animation" type="AnimationPlayer" parent="platforms/platform1"]
 libraries = {
