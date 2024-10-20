@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://c68kyvj8jjq2s"]
+
+[ext_resource type="Texture2D" uid="uid://giojqiqak7p4" path="res://Assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_j3ane"]
+[ext_resource type="Script" path="res://Scripts/slime.gd" id="2_1yf6j"]
+[ext_resource type="PackedScene" uid="uid://d0ikr6ty1jt8m" path="res://Scenes/killzone.tscn" id="2_6j6dw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pox34"]
+atlas = ExtResource("1_j3ane")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25nnh"]
+atlas = ExtResource("1_j3ane")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0cih"]
+atlas = ExtResource("1_j3ane")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqbud"]
+atlas = ExtResource("1_j3ane")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xq60w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pox34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25nnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0cih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqbud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bqvg"]
+size = Vector2(10, 13)
+
+[node name="slime" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_xq60w")
+autoplay = "default"
+frame = 1
+frame_progress = 0.26159
+script = ExtResource("2_1yf6j")
+
+[node name="Killzone" parent="." instance=ExtResource("2_6j6dw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_5bqvg")
+
+[node name="RayCastright" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(8, 0)
+
+[node name="RayCastleft" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(-8, 0)
