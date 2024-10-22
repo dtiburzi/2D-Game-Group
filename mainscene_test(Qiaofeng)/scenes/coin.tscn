@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://dj0hllcm6fj0l"]
+[gd_scene load_steps=18 format=3 uid="uid://dj0hllcm6fj0l"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_c6r54"]
 [ext_resource type="Texture2D" uid="uid://rkf0lr0mskp2" path="res://asset/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png" id="1_q7h3u"]
+[ext_resource type="AudioStream" uid="uid://hdrh4nofbcyt" path="res://scenes/Piano Note C Sound Effect.mp3" id="3_vuuvc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0qdmd"]
 atlas = ExtResource("1_q7h3u")
@@ -108,5 +109,9 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_phqu2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vuuvc")
+volume_db = 4.055
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
