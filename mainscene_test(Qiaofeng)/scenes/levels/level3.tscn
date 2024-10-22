@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cmfbtcwnt5vbx"]
+[gd_scene load_steps=32 format=3 uid="uid://cmfbtcwnt5vbx"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_mxv03"]
 [ext_resource type="PackedScene" uid="uid://cyst85fsck5xa" path="res://scenes/player_test.tscn" id="2_yem6e"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bjxavutn3axs5" path="res://asset/Pixel Adventure 1/Free/Background/Green.png" id="5_gv7o8"]
 [ext_resource type="Texture2D" uid="uid://c8lxklm4fg6cx" path="res://asset/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="6_ku8b8"]
 [ext_resource type="Texture2D" uid="uid://d1pf1jki7mxkw" path="res://asset/Pixel Adventure 1/Free/Background/Purple.png" id="7_og3eo"]
+[ext_resource type="Texture2D" uid="uid://dar5ocq067pwn" path="res://asset/own art assets/mountain Test.png" id="8_cffa2"]
 [ext_resource type="PackedScene" uid="uid://kde3axxra348" path="res://scenes/win_zone.tscn" id="8_jaycs"]
 [ext_resource type="PackedScene" uid="uid://bpvytm7tglis5" path="res://scenes/killzone.tscn" id="9_hi2fo"]
 [ext_resource type="PackedScene" uid="uid://dj0hllcm6fj0l" path="res://scenes/coin.tscn" id="10_7golh"]
@@ -353,6 +354,45 @@ texture = ExtResource("7_og3eo")
 2:3/0 = 0
 3:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5nsbt"]
+texture = ExtResource("8_cffa2")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_gl3kq"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lskxj")
@@ -360,6 +400,7 @@ sources/1 = SubResource("TileSetAtlasSource_8rb10")
 sources/2 = SubResource("TileSetAtlasSource_ec146")
 sources/3 = SubResource("TileSetAtlasSource_l4bc8")
 sources/4 = SubResource("TileSetAtlasSource_7c6g8")
+sources/5 = SubResource("TileSetAtlasSource_5nsbt")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f53u8"]
 size = Vector2(33, 42.5)
