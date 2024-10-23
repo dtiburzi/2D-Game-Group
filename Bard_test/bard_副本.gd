@@ -31,8 +31,13 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if direction == 0:
 			animated_sprite.play("bard_idle")
+<<<<<<< HEAD
+		else:
+			animated_sprite.play("bard_running")
+=======
 		#else:
 			#animated_sprite.play("run")
+>>>>>>> 5736bac7500aea61335bbb2d283c7ea4a15d2122
 	#else:
 		#animated_sprite.play("jump")
 		
