@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj0hllcm6fj0l"]
+[gd_scene load_steps=5 format=3 uid="uid://dj0hllcm6fj0l"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_c6r54"]
 [ext_resource type="Texture2D" uid="uid://b40xup4h8kt52" path="res://Audio Files/Note.png" id="2_hqjdj"]
-[ext_resource type="AudioStream" uid="uid://c6kxidiepenj3" path="res://Audio Files/Piano Note C Sound Effect.mp3" id="3_787vu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u8s40"]
 animations = [{
@@ -30,9 +29,5 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_phqu2")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_787vu")
-volume_db = 4.952
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

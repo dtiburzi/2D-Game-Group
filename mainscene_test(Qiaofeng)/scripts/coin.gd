@@ -1,10 +1,13 @@
 extends Area2D
 
-@onready var game_manager: Node = %"Game manager"
+@onready var game_manager: Node = get_parent().get_parent().get_node("Game manager")  # Access Game Manager
+@onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D2  # Access the AudioStreamPlayer2D
+
 var is_collected = false
+
 func _on_body_entered(_body):
-	game_manager.add_point()
 	if not is_collected:
 		is_collected = true
-		$AudioStreamPlayer2D.play()
-		hide()
+		game_manager.add_point()  # Call the add_point function on the Game Manager
+		$AudioStreamPlayer2D2.play()  # Play the sound associated with this coin
+		hide()  # Optionally hide or remove the coin
