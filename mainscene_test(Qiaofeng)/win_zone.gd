@@ -11,7 +11,8 @@ func _on_body_entered(_body: Node2D) -> void:
 		ending_song_timer = 14
 		audio_player = $Flute_Song
 	elif current_level == "Level3":
-		pass
+		ending_song_timer = 10
+		audio_player = $Piano_Song
 	print ("you win")
 	audio_player.play()
 	await get_tree().create_timer(ending_song_timer).timeout 

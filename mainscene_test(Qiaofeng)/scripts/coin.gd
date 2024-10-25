@@ -11,7 +11,7 @@ func _on_body_entered(_body):
 		elif current_level == "Level2":
 			audio_player = $AudioStreamPlayer2D
 		elif current_level == "Level3":
-			pass
+			audio_player = $AudioStreamPlayer2D
 		is_collected = true
 		game_manager.add_point()  # Call the add_point function on the Game Manager
 		audio_player.play()  # Play the sound associated with this coin
