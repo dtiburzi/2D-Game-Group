@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b8hhw3q52i02v"]
+[gd_scene load_steps=53 format=3 uid="uid://b8hhw3q52i02v"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ms4g3"]
 [ext_resource type="PackedScene" uid="uid://cyst85fsck5xa" path="res://scenes/player_test.tscn" id="2_5si2t"]
@@ -16,6 +16,16 @@
 [ext_resource type="Texture2D" uid="uid://c238fig58ge6u" path="res://asset/own art assets/back ground.png" id="10_50x7r"]
 [ext_resource type="PackedScene" uid="uid://cm825i37xsynf" path="res://scenes/platform_1.tscn" id="10_bej3h"]
 [ext_resource type="PackedScene" uid="uid://cla22ju3wrqcc" path="res://scenes/slime.tscn" id="11_qomes"]
+[ext_resource type="AudioStream" uid="uid://cexs0bvxcabpl" path="res://Audio Files/Audio Level 2 (Flute)/Flute Song.mp3" id="13_cr3bc"]
+[ext_resource type="AudioStream" uid="uid://coa2dvsy3r3ag" path="res://Audio Files/Audio Level 2 (Flute)/C4.mp3" id="15_1mji1"]
+[ext_resource type="AudioStream" uid="uid://oywwrubibvho" path="res://Audio Files/Audio Level 2 (Flute)/A4.mp3" id="16_moyti"]
+[ext_resource type="AudioStream" uid="uid://wk2u0lvggyey" path="res://Audio Files/Audio Level 2 (Flute)/C5.mp3" id="17_0c1rf"]
+[ext_resource type="AudioStream" uid="uid://cjv6csibqbvv7" path="res://Audio Files/Audio Level 2 (Flute)/E5.mp3" id="18_piyxm"]
+[ext_resource type="AudioStream" uid="uid://qs2mtevt3xm4" path="res://Audio Files/Audio Level 2 (Flute)/G5.mp3" id="19_3gb0a"]
+[ext_resource type="AudioStream" uid="uid://dtu13kvqdddg1" path="res://Audio Files/Audio Level 2 (Flute)/D5.mp3" id="20_kcfcp"]
+[ext_resource type="AudioStream" uid="uid://dtk6pthcji3ui" path="res://Audio Files/Audio Level 2 (Flute)/F5.mp3" id="21_g82j7"]
+[ext_resource type="AudioStream" uid="uid://bcyqlyuxjvlem" path="res://Audio Files/Audio Level 2 (Flute)/B4.mp3" id="22_8o0bu"]
+[ext_resource type="AudioStream" uid="uid://dy7ie5mv732j0" path="res://Audio Files/Audio Level 2 (Flute)/G4.mp3" id="23_sxdjp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b381k"]
 texture = ExtResource("3_oc476")
@@ -705,7 +715,7 @@ _data = {
 "move": SubResource("Animation_4ro46")
 }
 
-[node name="Node" type="Node2D"]
+[node name="Level2" type="Node2D"]
 
 [node name="Game manager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -737,6 +747,10 @@ nextLevel = ExtResource("9_qmlwv")
 position = Vector2(1458, -400)
 shape = SubResource("RectangleShape2D_f53u8")
 
+[node name="Flute_Song" type="AudioStreamPlayer2D" parent="win zone"]
+stream = ExtResource("13_cr3bc")
+volume_db = 2.971
+
 [node name="killzone" parent="." instance=ExtResource("8_q22nf")]
 position = Vector2(-3.8147e-06, 142)
 scale = Vector2(0.6, 0.6)
@@ -766,47 +780,107 @@ shape = SubResource("RectangleShape2D_qr6bd")
 [node name="coin" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(200, -9)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin"]
+stream = ExtResource("15_1mji1")
+volume_db = 2.971
+
 [node name="coin2" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(242, -9)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin2"]
+stream = ExtResource("16_moyti")
+volume_db = 2.971
 
 [node name="coin3" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(513, 3)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin3"]
+stream = ExtResource("16_moyti")
+volume_db = 2.971
+
 [node name="coin4" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(743, 104)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin4"]
+stream = ExtResource("16_moyti")
+volume_db = 2.971
 
 [node name="coin5" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(904, 85)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin5"]
+stream = ExtResource("17_0c1rf")
+volume_db = 2.971
+
 [node name="coin6" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(888, -104)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin6"]
+stream = ExtResource("17_0c1rf")
+volume_db = 2.971
 
 [node name="coin7" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(665, -215)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin7"]
+stream = ExtResource("17_0c1rf")
+volume_db = 2.971
+
 [node name="coin8" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(713, -216)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin8"]
+stream = ExtResource("18_piyxm")
+volume_db = 2.971
 
 [node name="coin9" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(993, -65)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin9"]
+stream = ExtResource("18_piyxm")
+volume_db = 2.971
+
 [node name="coin10" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(1546, -135)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin10"]
+stream = ExtResource("19_3gb0a")
+volume_db = 2.971
 
 [node name="coin11" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(1434, -9)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin11"]
+stream = ExtResource("20_kcfcp")
+volume_db = 2.971
+
 [node name="coin12" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(1737, -331)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin12"]
+stream = ExtResource("20_kcfcp")
+volume_db = 2.971
 
 [node name="coin13" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(1169, -94)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin13"]
+stream = ExtResource("21_g82j7")
+volume_db = 2.971
+
 [node name="coin14" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(1315, -537)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin14"]
+stream = ExtResource("22_8o0bu")
+volume_db = 2.971
+
 [node name="coin15" parent="coins" instance=ExtResource("9_duo46")]
 position = Vector2(1323, -427)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="coins/coin15"]
+stream = ExtResource("23_sxdjp")
+volume_db = 2.971
 
 [node name="platforms" type="Node" parent="."]
 

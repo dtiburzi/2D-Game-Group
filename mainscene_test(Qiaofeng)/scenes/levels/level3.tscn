@@ -522,7 +522,7 @@ _data = {
 "move3": SubResource("Animation_2q1uh")
 }
 
-[node name="Node" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="Game manager" type="Node" parent="."]
 unique_name_in_owner = true

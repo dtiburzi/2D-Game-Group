@@ -457,7 +457,7 @@ _data = {
 "move3": SubResource("Animation_2q1uh")
 }
 
-[node name="Node" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="Game manager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -595,7 +595,7 @@ nextLevel = ExtResource("8_hrgky")
 position = Vector2(1457, -302)
 shape = SubResource("RectangleShape2D_f53u8")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="win zone"]
+[node name="Guitar_Song" type="AudioStreamPlayer2D" parent="win zone"]
 stream = ExtResource("17_ot3u2")
 volume_db = 2.971
 
