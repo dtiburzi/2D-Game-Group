@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bmul6gare3yxr"]
+[gd_scene load_steps=50 format=3 uid="uid://bmul6gare3yxr"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_nl1fl"]
 [ext_resource type="PackedScene" uid="uid://cyst85fsck5xa" path="res://scenes/player_test.tscn" id="1_rhjrj"]
@@ -19,6 +19,8 @@
 [ext_resource type="AudioStream" uid="uid://c0vos80emlkh8" path="res://Audio Files/Audio Level 1 (Guitar)/D4.mp3" id="8_hekwe"]
 [ext_resource type="PackedScene" uid="uid://b8hhw3q52i02v" path="res://scenes/levels/level2.tscn" id="8_hrgky"]
 [ext_resource type="AudioStream" uid="uid://ch5uagnib583t" path="res://Audio Files/Audio Level 1 (Guitar)/B3.mp3" id="9_tlfn5"]
+[ext_resource type="Texture2D" uid="uid://d1uuagyclmfta" path="res://asset/own art assets/music note.png" id="11_qcdse"]
+[ext_resource type="FontFile" uid="uid://cghgc7rm1slap" path="res://asset/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="12_v10nb"]
 [ext_resource type="Texture2D" uid="uid://cr80dgoqkmr60" path="res://asset/own art assets/mountain-1.png" id="15_6u321"]
 [ext_resource type="AudioStream" uid="uid://b7jf8qn1ix2q3" path="res://Audio Files/Audio Level 1 (Guitar)/Guitar Song.mp3" id="17_ot3u2"]
 [ext_resource type="Texture2D" uid="uid://b2m82nromum1g" path="res://asset/Background/Background_Hills_v1.0(1)/_PNG/background1.png" id="21_v0f3x"]
@@ -657,6 +659,20 @@ position = Vector2(143.333, -76.6667)
 zoom = Vector2(2.6, 2.6)
 limit_bottom = 240
 limit_smoothed = true
+
+[node name="music icon" type="Sprite2D" parent="Player_test/Camera2D"]
+position = Vector2(-248.333, -183.333)
+scale = Vector2(0.533333, 0.533333)
+texture = ExtResource("11_qcdse")
+
+[node name="Score_Label" type="Label" parent="Player_test/Camera2D"]
+offset_left = -350.0
+offset_top = -186.667
+offset_right = -290.0
+offset_bottom = -163.667
+theme_override_fonts/font = ExtResource("12_v10nb")
+text = "1 / 15
+"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-7, -8)
