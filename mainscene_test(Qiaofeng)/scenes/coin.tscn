@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj0hllcm6fj0l"]
+[gd_scene load_steps=6 format=3 uid="uid://dj0hllcm6fj0l"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_c6r54"]
-[ext_resource type="Texture2D" uid="uid://b40xup4h8kt52" path="res://Audio Files/Note.png" id="2_hqjdj"]
+[ext_resource type="Texture2D" uid="uid://d1uuagyclmfta" path="res://asset/own art assets/music note.png" id="2_wkiro"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g80gw"]
+atlas = ExtResource("2_wkiro")
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u8s40"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_hqjdj")
+"texture": SubResource("AtlasTexture_g80gw")
 }],
 "loop": true,
 "name": &"default",
@@ -18,12 +22,13 @@ animations = [{
 radius = 5.0
 
 [node name="coin" type="Area2D"]
+scale = Vector2(2, 2)
 collision_mask = 2
 script = ExtResource("1_c6r54")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(5.96046e-08, -5.96046e-08)
-scale = Vector2(0.3125, 0.3125)
+position = Vector2(-1.19209e-07, -1)
+scale = Vector2(0.195313, 0.195313)
 sprite_frames = SubResource("SpriteFrames_u8s40")
 autoplay = "default"
 
