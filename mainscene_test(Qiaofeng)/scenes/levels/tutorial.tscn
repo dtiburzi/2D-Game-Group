@@ -1,10 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://bugjgi5qjnkl2"]
+[gd_scene load_steps=33 format=3 uid="uid://bugjgi5qjnkl2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bgthq"]
 [ext_resource type="PackedScene" uid="uid://dj0hllcm6fj0l" path="res://scenes/coin.tscn" id="2_t1bve"]
 [ext_resource type="AudioStream" uid="uid://defm05dopgvmw" path="res://Audio Files/Audio Level 1 (Guitar)/A3.mp3" id="3_h7vhn"]
 [ext_resource type="AudioStream" uid="uid://ff04igds3wn7" path="res://Audio Files/Audio Level 1 (Guitar)/C4.mp3" id="4_uw6v6"]
 [ext_resource type="AudioStream" uid="uid://btvvpef04wxrh" path="res://Audio Files/Audio Level 1 (Guitar)/E4.mp3" id="5_ds7y3"]
+[ext_resource type="FontFile" uid="uid://cghgc7rm1slap" path="res://asset/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="7_eqsgk"]
 [ext_resource type="PackedScene" uid="uid://cyst85fsck5xa" path="res://scenes/player_test.tscn" id="10_ck557"]
 [ext_resource type="Texture2D" uid="uid://dncdtyfxryqvc" path="res://asset/Terrain (16x16).png" id="11_yiha4"]
 [ext_resource type="Texture2D" uid="uid://0idofkqy4p3e" path="res://asset/brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="12_dwmb1"]
@@ -401,10 +402,6 @@ _data = {
 
 [node name="Level1" type="Node2D"]
 
-[node name="Game manager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_bgthq")
-
 [node name="coins" type="Node" parent="."]
 
 [node name="coin" parent="coins" instance=ExtResource("2_t1bve")]
@@ -446,8 +443,23 @@ volume_db = 1.981
 position = Vector2(61, 83)
 scale = Vector2(0.6, 0.6)
 
+[node name="Game manager" type="Node" parent="Player_test"]
+unique_name_in_owner = true
+script = ExtResource("1_bgthq")
+
+[node name="scoreLabel" type="Label" parent="Player_test/Game manager"]
+offset_left = -64.0
+offset_top = -93.0
+offset_right = 26.0
+offset_bottom = -69.0
+theme_override_fonts/font = ExtResource("7_eqsgk")
+theme_override_font_sizes/font_size = 16
+text = "X / 7"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Camera2D" type="Camera2D" parent="Player_test"]
-position = Vector2(143.333, -76.6667)
+position = Vector2(161.667, -108.333)
 zoom = Vector2(2.6, 2.6)
 limit_bottom = 240
 limit_smoothed = true
