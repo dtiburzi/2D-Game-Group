@@ -1,10 +1,14 @@
-[gd_scene load_steps=32 format=3 uid="uid://bugjgi5qjnkl2"]
+[gd_scene load_steps=36 format=3 uid="uid://bugjgi5qjnkl2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bgthq"]
 [ext_resource type="PackedScene" uid="uid://dj0hllcm6fj0l" path="res://scenes/coin.tscn" id="2_t1bve"]
 [ext_resource type="AudioStream" uid="uid://defm05dopgvmw" path="res://Audio Files/Audio Level 1 (Guitar)/A3.mp3" id="3_h7vhn"]
 [ext_resource type="AudioStream" uid="uid://ff04igds3wn7" path="res://Audio Files/Audio Level 1 (Guitar)/C4.mp3" id="4_uw6v6"]
 [ext_resource type="AudioStream" uid="uid://btvvpef04wxrh" path="res://Audio Files/Audio Level 1 (Guitar)/E4.mp3" id="5_ds7y3"]
+[ext_resource type="AudioStream" uid="uid://geqkany7t3hb" path="res://Audio Files/Audio Level 1 (Guitar)/G4.mp3" id="6_ocn61"]
+[ext_resource type="AudioStream" uid="uid://bkalfp38bbuxh" path="res://Audio Files/Audio Level 1 (Guitar)/F4.mp3" id="7_ogfow"]
+[ext_resource type="AudioStream" uid="uid://c0vos80emlkh8" path="res://Audio Files/Audio Level 1 (Guitar)/D4.mp3" id="8_aylda"]
+[ext_resource type="AudioStream" uid="uid://ch5uagnib583t" path="res://Audio Files/Audio Level 1 (Guitar)/B3.mp3" id="9_sj3sk"]
 [ext_resource type="PackedScene" uid="uid://cyst85fsck5xa" path="res://scenes/player_test.tscn" id="10_ck557"]
 [ext_resource type="Texture2D" uid="uid://dncdtyfxryqvc" path="res://asset/Terrain (16x16).png" id="11_yiha4"]
 [ext_resource type="Texture2D" uid="uid://0idofkqy4p3e" path="res://asset/brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="12_dwmb1"]
@@ -442,15 +446,64 @@ position = Vector2(1406, -115)
 stream = ExtResource("5_ds7y3")
 volume_db = 1.981
 
+[node name="coin8" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(221, 70)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin8"]
+stream = ExtResource("5_ds7y3")
+volume_db = 2.971
+
+[node name="coin9" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(279, 70)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin9"]
+stream = ExtResource("6_ocn61")
+volume_db = 2.971
+
+[node name="coin10" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(491, -78)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin10"]
+stream = ExtResource("6_ocn61")
+volume_db = 2.971
+
+[node name="coin11" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(872, -158)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin11"]
+stream = ExtResource("7_ogfow")
+volume_db = 2.972
+
+[node name="coin12" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(1161, -92)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin12"]
+stream = ExtResource("7_ogfow")
+volume_db = 2.971
+
+[node name="coin13" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(1270, -139)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin13"]
+stream = ExtResource("8_aylda")
+volume_db = 1.981
+
+[node name="coin14" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(643, -72)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin14"]
+stream = ExtResource("8_aylda")
+volume_db = 2.971
+
+[node name="coin15" parent="coins" instance=ExtResource("2_t1bve")]
+position = Vector2(1449, -116)
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="coins/coin15"]
+stream = ExtResource("9_sj3sk")
+
 [node name="Player_test" parent="." instance=ExtResource("10_ck557")]
 position = Vector2(61, 83)
 scale = Vector2(0.6, 0.6)
-
-[node name="Camera2D" type="Camera2D" parent="Player_test"]
-position = Vector2(143.333, -76.6667)
-zoom = Vector2(2.6, 2.6)
-limit_bottom = 240
-limit_smoothed = true
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-7, -8)
